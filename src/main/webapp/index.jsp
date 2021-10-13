@@ -14,11 +14,11 @@
 <% if (errorMsg != null) { %>
 	<p><%=errorMsg %></p>
 <% } %>
-<form action="/Login/Main" method="post">
+<form action="/Main" method="post">
 	<p>ユーザーID：<input type="text" name="id"></p>
 	<p>パスワード：<input type="password" name="pass"></p>
 	<input type="submit" value="ログイン">
 </form>
-<p><a href="/Login/Main?action=ura">裏口</a></p>
+<p><a href="/Main?action=ura">裏口</a></p>
 </body>
 </html>
