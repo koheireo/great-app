@@ -22,6 +22,6 @@ String pay=(String)session.getAttribute("pay");
 	<h3><%=pay %></h3>
 <% } %>
 
-<a href="/Login/Main?action=logout">ログアウトする</a>
+<a href="/Main?action=logout">ログアウトする</a>
 </body>
 </html>
