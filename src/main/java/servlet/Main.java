@@ -54,6 +54,20 @@ public class Main extends HttpServlet {
 		String pass = request.getParameter("pass");
 
 		//データベース行きます
+		System.out.println("確認テスト");
+		 String jdbcURL= System.getenv("DATABASE_SERVER");
+           	 String username= System.getenv("DATABASE_USERNAME");
+       		 String password= System.getenv("DATABASE_PASSWORD");
+         	   try {
+			connection= DriverManager.getConnection(jdbcURL, username, password);
+			System.out.println(jdbcURL);
+			System.out.println(username);
+			System.out.println("成功");
+			statement= connection.createStatement();
+		    } catch (SQLException e) {
+			e.printStackTrace();
+		    }
+		
 		AccountDAO dao = new AccountDAO();
 		Account account = dao.findOne(id, pass);
 
